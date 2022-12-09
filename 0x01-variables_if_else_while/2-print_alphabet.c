@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - retruns alphabets
+ * main - Print alphabets in lower case
  *
  * Returns: Always 0 (Success)
  *
