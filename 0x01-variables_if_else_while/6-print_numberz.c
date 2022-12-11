@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- * main - Prints single digits in a  base of ten
+ * main- Print numbers between 0 and 10
+ *
  * Return: Always 0 (Success)
  */
 
@@ -11,8 +12,9 @@ int main(void)
 	int num;
 
 	for (num = 0; num < 10; num++);
-	putchar((num % 10) + '0');
-	
+	{
+		putchar((num % 10) + '0');
+	}
 	putchar('\n');
 	return (0);
 }
