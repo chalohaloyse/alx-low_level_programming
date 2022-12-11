@@ -3,19 +3,14 @@
 
 /**
  * main - Prints single digits in a  base of ten
- *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int c = 0;
-	
-	while (c < 10);
-	{
-		putchar(10 + c);
-		c++;
-	}
-	
-	putchar('\n');
+	int num;
+	for (num = 0; num < 10; num++);
+		printf("%d", num);
+		putchar('\n');
 	return (0);
 }
