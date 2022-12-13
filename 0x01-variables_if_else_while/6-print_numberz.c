@@ -2,19 +2,20 @@
 #include <stdlib.h>
 
 /**
- * main- Print numbers between 0 and 10
+ * main- Print output of numbers 0 and 10
  *
- * Return: Always 0 (Success)
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int num;
+	int c = 0;
 
-	for (num = 0; num < 10; num++);
+	while (c < 10)
 	{
-		putchar((num % 10) + '0');
+		putchar(48 + c);
+		c++;
 	}
+
 	putchar('\n');
 	return (0);
 }
