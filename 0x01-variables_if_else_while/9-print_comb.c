@@ -2,26 +2,27 @@
 #include <stdlib.h>
 
 /**
- * main - prints numbers
+ * main - prints all possible combinations of single-digit numbers
  *
  * Return: Always 0 (Success)
  */
 
 int main(void)
-	{
-	int c;
+{
+	int (a = 0);
 
-	for
-		(c = 0; c < 10; c++);
-	{
-		putchar(c + '0');
-		if
-			(c < 9);
+	while
+		(a < 9)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(a + 48);
+			if
+				(a != 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			a++;
 		}
-	}
 	putchar('\n');
 	return (0);
-	}
+}
