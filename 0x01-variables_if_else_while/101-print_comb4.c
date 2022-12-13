@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print all possible different combination of three digits
+ * main - prints all possible different combination of three digits
  *
  * Return: Always 0 (sucess)
  *
@@ -17,6 +17,7 @@ int main(void)
 		for (tens = '0'; tens <= '9'; tens++)
 		{
 			for (ones = '0'; ones <= '9'; ones++)
+			{
 				if (!((ones == tens) || (tens == hundreds) ||
 							tens > ones) || (hundreds > tens))
 				{
@@ -31,6 +32,7 @@ int main(void)
 					}
 				}
 		}
+	}
 	}
 	putchar('\n');
 	return (0);
