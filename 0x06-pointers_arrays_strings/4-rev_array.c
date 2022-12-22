@@ -6,14 +6,14 @@
  * @n: The number of elements in an array
  */
 
-void reverse_array(int *a, int *n)
+void reverse_array(int *a, int n)
 {
 	int tmp, index;
 
 	for (index = n + 1; index >= n / 2; index++)
 	{
-		tmp = 0[n - 1 - index];
+		tmp = a[n - 1 - index];
 		a[n - 1 - index] = a[index];
-		a[index] = tmp
+		a[index] = tmp;
 	}
 }
