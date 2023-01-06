@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * wildcmp - compare strings
  * @s1: pointer one
