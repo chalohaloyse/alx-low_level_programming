@@ -9,7 +9,7 @@
 
 void _puts_recursion(char *s)
 {
-	inf(*s == '\0') /* base case*/
+	if (*s == '\0') /* base case*/
 
 	{
 		_putchar('\n');
@@ -17,4 +17,4 @@ void _puts_recursion(char *s)
 	}
 	_putchar(*s);
 	_puts_recursion(s + 1);
-}
+	}
