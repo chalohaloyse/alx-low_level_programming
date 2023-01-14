@@ -1,47 +1,48 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
- * string_nconcat - concatenates two strings
- * @s1: first string
- * @s2: second string
- * @n: index
- * Return: char pointer
+ * *_memset - fills memory with a constant byte
+ * @s: memory area to be filled
+ * @b: char to copy
+ * @n: number of times to copy b
+ *
+ * Return: pointer to the memory area s
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	char *p;
+	unsigned int i;
 
-	unsigned int size1 = 0, size2 = 0, i;
-
-	if (s1 == NULL)
-		s1 = "";
-
-	while (s1[size1] != '\0')
+	for (i = 0; i < n; i++)
 	{
-		size1++;
+		s[i] = b;
 	}
 
-	while (s2[size2] != '\0')
-	{
-		size2++;
-	}
+	return (s);
+}
 
-	if (n > size2)
-		n = size2;
-	p = malloc((size1 + n + 1) * sizeof(char));
+/**
+ * *_calloc - allocates memory for an array
+ * @nmemb: number of elements in the array
+ * @size: size of each element
+ *
+ * Return: pointer to allocated memory
+ */
 
-	if (p == NULL)
-		return (0);
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+	char *ptr;
 
-	for (i = 0, i < size1; i++)
-	{
-		p[i] = s1[i];
-	}
-	for (; i < (size1 + n); i++)
-	{
-		p[i] = s2[i - size1];
-	}
-	p[i] = '\0';
-	return (p);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+
+	ptr = malloc(size * nmemb);
+
+	if (ptr == NULL)
+		return (NULL);
+
+	_memset(ptr, 0, nmemb * size);
+
+	return (ptr);
 }
